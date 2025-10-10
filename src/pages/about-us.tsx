@@ -9,7 +9,7 @@ export default function AboutUs() {
         <title>About the System | Cat Distribution System</title>
         <meta
           name="description"
-          content="Discover the magic behind the Cat Distribution System - where feline companions find their destined humans through cosmic intervention."
+          content="Discover the magic behind the Cat Distribution System - where feline companions find their destined humans through cosmic intervention"
         />
       </Head>
 
@@ -28,16 +28,16 @@ export default function AboutUs() {
               </h2>
               <p className="text-lg text-gray-700 mb-6">
                 The Cat Distribution System is not a company or organization -
-                it's a natural phenomenon that has connected cats with their
-                destined humans since time immemorial. Like rainfall or the
-                changing of seasons, it operates on its own mysterious schedule,
-                ensuring every cat finds its perfect home.
+                it&apos;s a natural phenomenon that has connected cats with
+                their destined humans since time immemorial. Like rainfall or
+                the changing of seasons, it operates on its own mysterious
+                schedule, ensuring every cat finds its perfect home.
               </p>
               <p className="text-lg text-gray-700 mb-6">
                 Our role is simply to document and celebrate these cosmic
                 connections, while helping people understand and trust in the
-                system's perfect timing. No applications, no waiting lists -
-                just pure feline destiny at work.
+                system&apos;s perfect timing. No applications, no waiting lists
+                - just pure feline destiny at work.
               </p>
             </div>
             <div className="bg-orange-50 p-6 rounded-lg shadow-md">
@@ -63,8 +63,8 @@ export default function AboutUs() {
                 <li className="flex items-start">
                   <span className="text-orange-600 mr-2">•</span>
                   <span>
-                    The service is completely free because you can't put a price
-                    on destiny.
+                    The service is completely free because you can&apos;t put a
+                    price on destiny.
                   </span>
                 </li>
               </ul>
@@ -78,23 +78,23 @@ export default function AboutUs() {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white p-4 rounded">
                 <blockquote className="text-gray-700 italic">
-                  "I wasn't even looking for a cat, but one day she just
-                  appeared on my windowsill. Three years later, we're
-                  inseparable."
+                  &quot;I wasn&apos;t even looking for a cat, but one day she
+                  just appeared on my windowsill. Three years later, we&apos;re
+                  inseparable&quot;
                 </blockquote>
                 <p className="text-gray-600 mt-2">- Sarah, Portland</p>
               </div>
               <div className="bg-white p-4 rounded">
                 <blockquote className="text-gray-700 italic">
-                  "The system knew exactly what I needed. My cat arrived
-                  precisely when I was going through a tough time."
+                  &quot;The system knew exactly what I needed. My cat arrived
+                  precisely when I was going through a tough time&quot;
                 </blockquote>
                 <p className="text-gray-600 mt-2">- Miguel, Austin</p>
               </div>
               <div className="bg-white p-4 rounded">
                 <blockquote className="text-gray-700 italic">
-                  "I used to be skeptical, but after experiencing it myself, I'm
-                  a true believer in the system."
+                  &quot;I used to be skeptical, but after experiencing it
+                  myself, I&apos;m a true believer in the system&quot;
                 </blockquote>
                 <p className="text-gray-600 mt-2">- Emma, Toronto</p>
               </div>

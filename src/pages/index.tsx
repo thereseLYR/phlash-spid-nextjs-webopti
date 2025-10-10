@@ -31,8 +31,8 @@ export default function Home() {
               <h1 className="text-5xl font-bold mb-6">The Cat Will Find You</h1>
               <p className="text-xl mb-8 max-w-2xl mx-auto font-medium">
                 Trust in the mysterious ways of the Cat Distribution System.
-                When the time is right, your feline friend will appear - it's
-                nature's most efficient delivery service.
+                When the time is right, your feline friend will appear -
+                it&apos;s nature&apos;s most efficient delivery service.
               </p>
               <a className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-block">
                 Learn More
@@ -53,8 +53,8 @@ export default function Home() {
                   </h3>
                   <p className="text-gray-700">
                     Our cats have an uncanny ability to appear exactly when
-                    they're meant to. No waiting lists, no complicated forms -
-                    just cosmic timing.
+                    they&apos;re meant to. No waiting lists, no complicated
+                    forms - just cosmic timing.
                   </p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md">
@@ -72,8 +72,8 @@ export default function Home() {
                     Long-term Fulfillment
                   </h3>
                   <p className="text-gray-700">
-                    When a cat chooses you, it's for life. Our satisfaction rate
-                    is purr-fect, with countless happy matches made through
+                    When a cat chooses you, it&apos;s for life. Our satisfaction
+                    rate is purr-fect, with countless happy matches made through
                     cosmic intervention.
                   </p>
                 </div>
