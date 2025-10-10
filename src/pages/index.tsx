@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Innovate AI | Transforming Tomorrow</title>
+        <title>Cat Distribution System | Your Destined Feline Friend</title>
         <meta
           name="description"
-          content="Innovate AI - Pioneering the future of artificial intelligence solutions for businesses"
+          content="Experience the magic of the Cat Distribution System - where cats find their way to their destined humans, completely free and efficiently delivered."
         />
       </Head>
 
@@ -18,18 +18,25 @@ export default function Home() {
 
         <main className="flex-grow">
           {/* Hero Section */}
-          <div className="bg-gradient-to-r from-blue-700 to-indigo-800 text-white py-20">
-            <div className="container mx-auto px-4">
-              <h1 className="text-5xl font-bold mb-6">
-                Revolutionizing Business with AI
-              </h1>
-              <p className="text-xl mb-8 max-w-2xl font-medium">
-                Empowering businesses to thrive in the digital age through
-                cutting-edge artificial intelligence solutions.
+          <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-white py-20">
+            <div className="flex items-center">
+              <img
+                src={"https://cataas.com/cat/gif"}
+                alt="A delightful cat waiting to find its human"
+                className="object-contain mx-auto my-4 rounded-lg shadow-lg w-64 h-64"
+              />
+            </div>
+
+            <div className="container mx-auto px-4 text-center">
+              <h1 className="text-5xl font-bold mb-6">The Cat Will Find You</h1>
+              <p className="text-xl mb-8 max-w-2xl mx-auto font-medium">
+                Trust in the mysterious ways of the Cat Distribution System.
+                When the time is right, your feline friend will appear - it's
+                nature's most efficient delivery service.
               </p>
-              <button className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Started
-              </button>
+              <a className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-block">
+                Learn More
+              </a>
             </div>
           </div>
 
@@ -37,34 +44,37 @@ export default function Home() {
           <div className="py-16 bg-gray-50">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-bold text-center mb-12">
-                Why Choose Innovate AI?
+                Why Trust the Cat Distribution System?
               </h2>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-semibold mb-4 text-gray-900">
-                    Smart Solutions
+                    Fast & Efficient Delivery
                   </h3>
                   <p className="text-gray-700">
-                    Leverage our advanced AI algorithms to optimize your
-                    business processes and decision-making.
+                    Our cats have an uncanny ability to appear exactly when
+                    they're meant to. No waiting lists, no complicated forms -
+                    just cosmic timing.
                   </p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-semibold mb-4 text-gray-900">
-                    Real-Time Analytics
+                    100% Free Service
                   </h3>
                   <p className="text-gray-700">
-                    Get instant insights with our real-time data analysis and
-                    predictive modeling capabilities.
+                    The best things in life are free. The Cat Distribution
+                    System operates on love, destiny, and the occasional treat -
+                    never your wallet.
                   </p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-semibold mb-4 text-gray-900">
-                    Seamless Integration
+                    Long-term Fulfillment
                   </h3>
                   <p className="text-gray-700">
-                    Effortlessly integrate our AI solutions with your existing
-                    systems and workflows.
+                    When a cat chooses you, it's for life. Our satisfaction rate
+                    is purr-fect, with countless happy matches made through
+                    cosmic intervention.
                   </p>
                 </div>
               </div>
@@ -75,14 +85,14 @@ export default function Home() {
           <div className="py-16">
             <div className="container mx-auto px-4 text-center">
               <h2 className="text-3xl font-bold mb-6 text-gray-900">
-                Ready to Transform Your Business?
+                Ready to Be Chosen?
               </h2>
               <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-                Join the hundreds of businesses already leveraging our AI
-                solutions to stay ahead of the competition.
+                No sign-ups needed. No forms to fill. Just keep your heart and
+                door open - your destined feline friend is already on their way.
               </p>
-              <button className="bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
-                Schedule a Demo
+              <button className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+                Trust the System
               </button>
             </div>
           </div>
