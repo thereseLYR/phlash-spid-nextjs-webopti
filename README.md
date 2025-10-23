@@ -1,40 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Cat Distribution System - Performance Workshop Baseline
+
+This Next.js application serves as a baseline for web performance optimization workshops. It intentionally implements various performance anti-patterns to provide workshop participants with opportunities to identify and optimize real-world performance issues.
+
+## Project Purpose
+
+This application is deliberately designed with sub-optimal performance patterns to serve as a learning tool. Workshop participants will:
+
+1. Identify performance bottlenecks
+2. Measure performance metrics
+3. Implement optimizations
+4. Validate improvements
+
+## Core Requirements
+
+While optimizing the application, the following features must be maintained:
+
+### Essential Components
+
+- Header and footer must maintain their current appearance and functionality
+- All core routes must remain functional:
+  - Landing page (`/`)
+  - About Us (`/about-us`)
+  - Contact Us (`/contact-us`)
+
+### Dynamic Content Requirements
+
+- Announcement banner below the header must:
+  - Display quote of the day from a dynamic API
+  - Update at least once per day
+- Hero section must include:
+  - Dynamic cat image from an API
+  - Image must change at least once per day
 
 ## Getting Started
 
-First, run the development server:
+### Running the local environment (Development mode)
 
 ```bash
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+After npm packages are installed, you only need to run `npm run dev` to start the server.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Running a production build locally
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+# Build for production
+npm run build
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+# Start production server
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+After npm packages are installed, you will need to run both commands to start the server.
 
-## Learn More
+- `npm run build` compiles the latest version of your changes, and dumps the output in the `.next` folder
+- `npm start` starts the server in production mode, using the contents of the `.next` folder
 
-To learn more about Next.js, take a look at the following resources:
+### Performance Measurement
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+To measure the baseline performance and track improvements:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Use Lighthouse in Chrome DevTools
+2. Monitor Core Web Vitals in Chrome DevTools
+3. Use the Performance tab for detailed analysis
+4. Check Network tab for waterfall charts
 
-## Deploy on Vercel
+For accurate performance testing, always use production builds (i.e. `npm start` instead of `npm run dev`) and measure on representative devices/networks. For this workshop, we will focus on measurements for mobile devices.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### General workflow
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+1. Measuring current performance (Lighthouse, Core Web Vitals)
+2. Identifying specific performance bottlenecks
+3. Implementing optimizations while maintaining core functionality
+4. Validating improvements with metrics
+
+### Notes for Participants
+
+- Do not remove core functionality while optimizing
+- All performance improvements should be measurable
+- Focus on real-world optimization techniques
+- Document your improvements and their impact
+
+## Other Information
+
+### Tech Stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- External APIs for dynamic content
+
+### Other Resources
+
+- [Web Vitals](https://web.dev/vitals/)
+- [Lighthouse Documentation](https://developers.google.com/web/tools/lighthouse)
+- [Next.js Performance Documentation](https://nextjs.org/docs/pages/building-your-application/optimizing)
+- [Chrome DevTools Performance Analysis](https://developer.chrome.com/docs/devtools/performance/)

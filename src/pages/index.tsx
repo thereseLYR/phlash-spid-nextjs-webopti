@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { ApiResponse } from "./api/quotes";
+import Link from "next/link";
 
 // Function to fetch wisdom from multiple sources
 const fetchWisdom = async (): Promise<string[]> => {
@@ -80,12 +81,12 @@ export default function Home() {
             the time is right, your feline friend will appear - it&apos;s
             nature&apos;s most efficient delivery service.
           </p>
-          <a
+          <Link
             className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-block"
             href="/about-us"
           >
             Learn More
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -140,11 +141,11 @@ export default function Home() {
             No sign-ups needed. No forms to fill. Just keep your heart and door
             open - your destined feline friend is already on their way.
           </p>
-          <a href="/about-us">
+          <Link href="/about-us">
             <button className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
               Learn More
             </button>
-          </a>
+          </Link>
         </div>
       </div>
 
