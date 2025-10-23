@@ -17,7 +17,6 @@ const MobileDrawer = ({ isOpen, onClose }: MobileDrawerProps) => {
           <button
             className="mb-8 text-gray-300 hover:text-white"
             onClick={onClose}
-            aria-label="Close menu"
           >
             <svg
               className="w-6 h-6"

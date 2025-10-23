@@ -16,7 +16,6 @@ const Header = () => {
         <button
           className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5"
           onClick={toggleMenu}
-          aria-label="Toggle menu"
         >
           <span
             className={`block w-6 h-0.5 bg-white transition-transform duration-300 ${
@@ -37,11 +36,7 @@ const Header = () => {
 
         {/* Logo placeholder */}
         <div className="h-10">
-          <img
-            src="/CDS.svg"
-            alt="Cat Distribution System Logo"
-            className="w-full h-full object-contain invert"
-          />
+          <img src="/CDS.svg" className="w-full h-full object-contain invert" />
         </div>
 
         {/* Desktop Navigation */}
