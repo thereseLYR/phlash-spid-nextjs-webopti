@@ -23,6 +23,7 @@ async function fetchWisdom(): Promise<string[]> {
 // Pass a promise factory (or a promise) and call `.read()` inside a component.
 function createResource<T>(promiseFactory: () => Promise<T>) {
   let status: "pending" | "success" | "error" = "pending";
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   let value: T | any;
 
   const suspender = promiseFactory().then(
