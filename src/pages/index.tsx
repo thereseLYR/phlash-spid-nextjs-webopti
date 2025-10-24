@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
 // Dynamically load the client-only quotes component (no SSR) to avoid
 // hydration mismatches when the client fetches data.
@@ -28,9 +29,14 @@ export default function Home() {
       <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-white py-20">
         <div className="flex items-center flex-wrap">
           {/* Images without dimensions causing layout shifts */}
-          <img
-            src={"https://cataas.com/cat/gif"}
+          <Image
+            src={`https://cataas.com/cat?${new Date().getTime()}`}
             className="object-contain mx-auto my-4 rounded-lg shadow-lg w-64 h-64"
+            priority
+            height={200}
+            width={200}
+            alt={"Random cat image"}
+            unoptimized
           />
         </div>
 
