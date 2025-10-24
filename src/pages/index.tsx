@@ -1,50 +1,14 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import { useEffect, useState } from "react";
-import { ApiResponse } from "./api/quotes";
 import Link from "next/link";
 
-// Function to fetch wisdom from multiple sources
-const fetchWisdom = async (): Promise<string[]> => {
-  try {
-    // Fetch all quotes through our API route which handles CORS
-    const response = await fetch("/api/quotes");
-    const data: ApiResponse = await response.json();
-
-    // Mix and transform the responses into "cosmic cat wisdom"
-    const quotes = [
-      ...(data.zenQuotes?.slice(0, 2) || []).map((q) => `Cat Wisdom: ${q.q}`),
-      ...(data.catData?.data?.slice(0, 2) || []).map((f) => f.fact),
-      ...(data.adviceData?.slips?.slice(0, 1) || []).map(
-        (s) => `Cosmic Truth: ${s.advice}`
-      ),
-    ];
-
-    return quotes;
-  } catch (error) {
-    console.error("Error fetching wisdom:", error);
-    return [];
-  }
-};
+// Dynamically load the client-only quotes component (no SSR) to avoid
+// hydration mismatches when the client fetches data.
+const QuotesClient = dynamic(() => import("../components/QuotesClient"), {
+  ssr: false,
+});
 
 export default function Home() {
-  const [quotes, setQuotes] = useState<string[]>([]);
-  const [showBanner, setShowBanner] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const loadQuotes = async () => {
-      setIsLoading(true);
-
-      const initialWisdom = await fetchWisdom();
-      setQuotes(initialWisdom);
-
-      setIsLoading(false);
-      setShowBanner(true); // Banner appears after content loads
-    };
-
-    loadQuotes();
-  }, []);
-
   return (
     <>
       <Head>
@@ -55,14 +19,10 @@ export default function Home() {
         />
       </Head>
 
-      {/* QOTD Banner */}
-      {showBanner && (
-        <div className="bg-blue-500 text-white p-4 text-center">
-          🐱 Quote of the Day 🐱
-          <div>{quotes[0]}</div>
-          <div>{quotes[4]}</div>
-        </div>
-      )}
+      {/* QOTD Banner (always appears) */}
+      <div className="bg-blue-500 text-white p-4 text-center min-h-24 flex flex-col items-center justify-center">
+        <QuotesClient mode={"banner"} />
+      </div>
 
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-white py-20">
@@ -149,17 +109,12 @@ export default function Home() {
         </div>
       </div>
 
-      {showBanner && (
-        <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-gray-700 text-center py-12">
-          <div style={{ minHeight: "100px" }}>
-            {quotes.map((quote, index) => (
-              <p key={index} className="mb-2 animate-fade-in">
-                {quote}
-              </p>
-            ))}
-          </div>
+      {/* also always appears */}
+      <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-gray-700 text-center py-12">
+        <div style={{ minHeight: "100px" }} className="min-h-24">
+          <QuotesClient mode={"list"} />
         </div>
-      )}
+      </div>
 
       <style jsx>{`
         @keyframes fadeIn {
