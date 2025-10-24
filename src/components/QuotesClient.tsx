@@ -9,11 +9,7 @@ async function fetchWisdom(): Promise<string[]> {
     const data: ApiResponse = await response.json();
 
     const quotes = [
-      ...(data.zenQuotes?.slice(0, 2) || []).map((q) => `Cat Wisdom: ${q.q}`),
-      ...(data.catData?.data?.slice(0, 2) || []).map((f) => f.fact),
-      ...(data.adviceData?.slips?.slice(0, 1) || []).map(
-        (s) => `Cosmic Truth: ${s.advice}`
-      ),
+      `Cat Fact: ${data.catData?.fact || "Cats are mysterious creatures."}`,
     ];
 
     return quotes;
@@ -59,7 +55,6 @@ function QuotesBanner({ resource }: { resource: { read: () => string[] } }) {
     <>
       <div>🐱 Quote of the Day 🐱</div>
       <div>{quotes[0] ?? ""}</div>
-      <div>{quotes[4] ?? ""}</div>
     </>
   );
 }
